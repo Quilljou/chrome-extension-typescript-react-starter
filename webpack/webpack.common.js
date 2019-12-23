@@ -5,8 +5,8 @@ const srcDir = '../src/';
 
 module.exports = {
     entry: {
-        popup: path.join(__dirname, srcDir + 'popup.ts'),
-        options: path.join(__dirname, srcDir + 'options.ts'),
+        popup: path.join(__dirname, srcDir + 'popup/index.tsx'),
+        options: path.join(__dirname, srcDir + 'options/index.tsx'),
         background: path.join(__dirname, srcDir + 'background.ts'),
         content_script: path.join(__dirname, srcDir + 'content_script.ts')
     },
@@ -24,7 +24,7 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
-                use: 'ts-loader',
+                use: 'babel-loader',
                 exclude: /node_modules/
             }
         ]
