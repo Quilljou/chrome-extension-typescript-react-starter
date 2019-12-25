@@ -1,8 +1,8 @@
-# Chrome Extension TypeScript Starter
+# Chrome Extension TypeScript React Starter
 
-[![Build Status](https://travis-ci.org/chibat/chrome-extension-typescript-starter.svg?branch=master)](https://travis-ci.org/chibat/chrome-extension-typescript-starter)
+<!-- [![Build Status](https://travis-ci.org/chibat/chrome-extension-typescript-starter.svg?branch=master)](https://travis-ci.org/chibat/chrome-extension-typescript-starter) -->
 
-Chrome Extension, TypeScript and Visual Studio Code
+Chrome Extension, TypeScript, React and Visual Studio Code
 
 ## Prerequisites
 
@@ -15,9 +15,9 @@ Chrome Extension, TypeScript and Visual Studio Code
 ## Includes the following
 
 * TypeScript
+* React
 * Webpack
 * Moment.js
-* jQuery
 * Jest
 * Example Code
     * Chrome Storage
@@ -28,8 +28,7 @@ Chrome Extension, TypeScript and Visual Studio Code
 
 ## Project Structure
 
-* src/typescript: TypeScript source files
-* src/assets: static files
+* src: TypeScript source files
 * dist: Chrome Extension directory
 * dist/js: Generated JavaScript files
 
