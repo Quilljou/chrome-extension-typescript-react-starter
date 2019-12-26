@@ -11,8 +11,8 @@ module.exports = {
         content_script: path.join(__dirname, srcDir + 'content_script.ts')
     },
     output: {
-        path: path.join(__dirname, '../dist/js'),
-        filename: '[name].js'
+        path: path.join(__dirname, '../dist'),
+        filename: 'js/[name].js'
     },
     optimization: {
         splitChunks: {
@@ -36,7 +36,7 @@ module.exports = {
         // exclude locale files in moment
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         new CopyPlugin([
-            { from: '.', to: '../' }
+            { from: '.', to: '../dist' }
           ],
           {context: 'public' }
         ),

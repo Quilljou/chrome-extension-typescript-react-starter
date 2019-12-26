@@ -16,9 +16,9 @@ Chrome Extension, TypeScript, React and Visual Studio Code
 
 * TypeScript
 * React
+* Stylus
 * Webpack
 * Moment.js
-* Jest
 * Example Code
     * Chrome Storage
     * Options Version 2
@@ -45,7 +45,7 @@ npm install
 ## Build
 
 ```
-npm run build
+npm run prod  # or yarn prod
 ```
 
 ## Build in watch mode
@@ -53,7 +53,7 @@ npm run build
 ### terminal
 
 ```
-npm run watch
+npm run start  # or yarn start
 ```
 
 ### Visual Studio Code
@@ -66,5 +66,6 @@ type `Ctrl + Shift + B`
 
 Load `dist` directory
 
-## Test
-`npx jest` or `npm run test`
+
+## About CSS in production mode
+If you want to generate independent css files in production mode. you can uncoment the MiniCssExtractPlugin in `webpack/webpack.prod.js` and css entry  in `public/*.html`. comment the style-loader in `webpack/webpack.prod.js`.

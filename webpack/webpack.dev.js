@@ -3,5 +3,11 @@ const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
     devtool: 'inline-source-map',
-    mode: 'development'
+    mode: 'development',
+    module: {
+        rules: [{
+          test: /\.styl$/,
+          use: ['style-loader', 'css-loader', 'stylus-loader'],
+      }]
+    },
 });
