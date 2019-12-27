@@ -19,6 +19,8 @@ Chrome Extension, TypeScript, React and Visual Studio Code
 * Stylus
 * Webpack
 * Moment.js
+* Eslint
+* Prettier
 * Example Code
     * Chrome Storage
     * Options Version 2
