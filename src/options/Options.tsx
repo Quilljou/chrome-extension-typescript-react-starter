@@ -1,9 +1,9 @@
-import React, { useState, useEffect, ChangeEvent } from 'react'
+import React, { useState, useEffect, ChangeEvent } from 'react';
 
 export default function App() {
-  const [colorValue, setColorValue] = useState('')
-  const [likeValue, setLikeValue] = useState(true)
-  const [status, setStatus] = useState('')
+  const [colorValue, setColorValue] = useState('');
+  const [likeValue, setLikeValue] = useState(true);
+  const [status, setStatus] = useState('');
 
   useEffect(() => {
     // Restores select box and checkbox state using the preferences
@@ -14,19 +14,19 @@ export default function App() {
         likesColor: true,
       },
       function(items) {
-        setColorValue(items.favoriteColor)
-        setLikeValue(items.likesColor)
+        setColorValue(items.favoriteColor);
+        setLikeValue(items.likesColor);
       },
-    )
-  }, [])
+    );
+  }, []);
 
   const colorValueChanged = (e: ChangeEvent<HTMLSelectElement>) => {
-    setColorValue(e.target.value)
-  }
+    setColorValue(e.target.value);
+  };
 
   const likeValueChanged = (e: ChangeEvent<HTMLInputElement>) => {
-    setLikeValue(e.target.checked)
-  }
+    setLikeValue(e.target.checked);
+  };
 
   // Restores select box and checkbox state using the preferences
   // stored in chrome.storage.
@@ -38,13 +38,13 @@ export default function App() {
       },
       function() {
         // Update status to let user know options were saved.
-        setStatus('Options saved.')
+        setStatus('Options saved.');
         setTimeout(function() {
-          setStatus('')
-        }, 750)
+          setStatus('');
+        }, 750);
       },
-    )
-  }
+    );
+  };
 
   return (
     <div>
@@ -63,5 +63,5 @@ export default function App() {
         Save
       </button>
     </div>
-  )
+  );
 }

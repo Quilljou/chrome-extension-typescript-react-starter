@@ -10,13 +10,24 @@
     "build:prod": "webpack --config webpack/webpack.prod.js",
     "clean": "rimraf dist",
     "tsc": "tsc",
-    "lint": "eslint --ext .ts,.tsx,.js src/*/** --quiet"
+    "lint": "eslint --ext .ts,.tsx,.js src/*/**"
   },
   "author": "",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/chibat/chrome-extension-typescript-starter.git"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "dependencies": {
     "moment": "~2.24.0",
@@ -41,6 +52,8 @@
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
     "mini-css-extract-plugin": "^0.9.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.17.0",
